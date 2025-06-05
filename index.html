@@ -1,0 +1,482 @@
+<!doctype html>
+<html class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alefew Yimer Portfolio</title>
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+  <script type="module" crossorigin src="/assets/index-DU_4UaxQ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bfxp8UAZ.css">
+</head>
+
+<body class="bg-slate-800 transition-colors duration-300">
+    <!-- Main Section -->
+    <section class="container mx-auto flex flex-col min-h-screen">
+        <!-- Navigation Bar -->
+        <nav class="flex flex-row items-center justify-between dark:bg-slate-950 md:mx-4 lg:mx-16 px-4 py-2 shadow shadow-lg text-white backdrop-blur-xl z-30 rounded-t-lg relative 
+            border border-slate-200 dark:border-slate-700">
+            <div class="flex items-center">
+                <img class="hover:text-blue-400 transition-colors w-20 h-15" src="lg.png" />
+
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav flex flex-row space-x-6 ml-6">
+                    <button onclick="handleNavClick('about')" id="about-nav"
+                        class="nav-link hover:text-blue-400 transition-colors">About</button>
+                    <button onclick="handleNavClick('projects')" id="projects-nav"
+                        class="nav-link hover:text-blue-400 transition-colors">Projects</button>
+                    <button onclick="handleNavClick('publications')" id="publications-nav"
+                        class="nav-link hover:text-blue-400 transition-colors">Publications</button>
+                    <!-- <button onclick="handleNavClick('references')" id="references-nav"
+                        class="nav-link hover:text-blue-400 transition-colors">References</button> -->
+                    <button onclick="handleNavClick('contact')" id="contact-nav"
+                        class="nav-link hover:text-blue-400 transition-colors">Contact</button>
+                </div>
+            </div>
+
+            <!-- Social Icons - Hidden on mobile -->
+            <div class="hidden md:flex flex-row items-center space-x-4">
+                <a href="https://github.com/aleale2121" target="_blank" class="hover:text-blue-400 transition-colors">
+                    <i class="fab fa-github bg-slate-950 text-2xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/alefew" target="_blank" class="hover:text-blue-400 transition-colors">
+                    <i class="fab fa-linkedin-in bg-slate-100 text-sky-800 text-md px-[3.5px] py-[3px] rounded-sm"></i>
+                </a>
+                <a href="https://t.me/aleale2121" target="_blank"
+                    class="hover:text-blue-400 transition-colors relative inline-block bg-slate-950">
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <div class="absolute inset-0 rounded-full border-2 border-blue-500 pointer-events-none"></div>
+                        <i class="fab fa-telegram text-blue-500 text-2xl relative"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/alefew_yimer" target="_blank"
+                    class="hover:text-blue-400 transition-colors">
+                    <i class="fab fa-instagram text-pink-600 bg-slate-950 text-2xl"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"
+                onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Mobile Navigation Links -->
+            <div id="mobile-nav-links" class="mobile-nav-links md:hidden">
+                <button onclick="handleNavClick('about')" id="mobile-about-nav"
+                    class="nav-link block w-full text-left px-4 py-2 hover:text-blue-400 transition-colors">About</button>
+                <button onclick="handleNavClick('projects')" id="mobile-projects-nav"
+                    class="nav-link block w-full text-left px-4 py-2 hover:text-blue-400 transition-colors">Projects</button>
+                <button onclick="handleNavClick('publications')" id="mobile-publications-nav"
+                    class="nav-link block w-full text-left px-4 py-2 hover:text-blue-400 transition-colors">Publications</button>
+                <!-- <button onclick="handleNavClick('references')" id="mobile-references-nav"
+                    class="nav-link block w-full text-left px-4 py-2 hover:text-blue-400 transition-colors">References</button> -->
+                <button onclick="handleNavClick('contact')" id="mobile-contact-nav"
+                    class="nav-link block w-full text-left px-4 py-2 hover:text-blue-400 transition-colors">Contact</button>
+
+                <!-- Mobile Social Icons -->
+                <div class="flex justify-center space-x-6 px-4 py-4 md:hidden">
+                    <a href="https://github.com/aleale2121" target="_blank"
+                        class="hover:text-blue-400 transition-colors">
+                        <i class="fab fa-github bg-slate-950 text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/alefew" target="_blank"
+                        class="hover:text-blue-400 transition-colors">
+                        <i
+                            class="fab fa-linkedin-in bg-slate-100 text-sky-800 text-md px-[3.5px] py-[3px] rounded-sm"></i>
+                    </a>
+                    <a href="https://t.me/aleale2121" target="_blank"
+                        class="hover:text-blue-400 transition-colors relative inline-block bg-slate-950">
+                        <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center relative">
+                            <div class="absolute inset-0 rounded-full border-4 border-blue-500 pointer-events-none">
+                            </div>
+                            <i
+                                class="fab fa-telegram text-blue-500 text-xl absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/alefew_yimer" target="_blank"
+                        class="hover:text-blue-400 transition-colors">
+                        <i class="fab fa-instagram text-pink-600 bg-slate-950 text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- About Me Section -->
+        <header class="content-container bg-white dark:bg-slate-900 shadow-lg md:mx-4 lg:mx-16 px-6 py-16 lg:px-12 lg:py-24 
+        border-x border-x-slate-200 dark:border-x-slate-700 transition-colors duration-300">
+            <div id="about-section"
+                class="relative flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12 z-10 animate-fade-in-up">
+
+                <div
+                    class="max-w-2xl order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left mx-auto md:mx-0">
+                    <h1
+                        class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight text-slate-800 dark:text-white">
+                        Hi, I'm <span class="text-blue-600 dark:text-blue-400">Alefew Yimer</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-600 dark:text-slate-300 mb-3 leading-relaxed">
+                        I architect <span class="font-semibold text-blue-600 dark:text-blue-400">high-performance
+                            systems</span>,
+                        engineer <span class="font-semibold text-purple-600 dark:text-purple-400">resilient APIs</span>,
+                        and craft <span class="font-semibold text-green-600 dark:text-green-400">scalable
+                            microservices</span> that power
+                        business-transforming applications at scale.
+                    </p>
+
+                    <div class="flex flex-col  mb-3 w-full">
+                        <div class="flex items-center space-x-3 text-base dark:text-slate-300">
+                            <span
+                                class="w-8 h-8 flex items-center justify-center bg-slate-900 dark:bg-slate-900 rounded-full">
+                                <i class="fas fa-envelope text-blue-600 dark:text-blue-400"></i>
+                            </span>
+                            <span>alefew.yimer@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-base dark:text-slate-300">
+                            <span
+                                class="w-8 h-8 flex items-center justify-center bg-slate-100 dark:bg-slate-900 rounded-full">
+                                <i class="fab fa-telegram text-blue-500 dark:text-blue-400"></i>
+                            </span>
+                            <a href="https://t.me/aleale2121" target="_blank" class="hover:underline">@aleale2121</a>
+                        </div>
+                    </div>
+
+                    <!-- Download CV Button -->
+                    <button onclick="togglePdfModal()"
+                        class="mt-2 group relative overflow-hidden bg-teal-800 hover:bg-teal-700 text-gray-300 font-medium py-3 px-6 rounded-full shadow transition-all duration-300 transform hover:-translate-y-0.5">
+                        <span class="relative z-10 flex items-center">
+                            <span>Download CV</span>
+                            <span class="ml-2 group-hover:translate-x-1 transition-transform duration-300">
+                                <i class="fas fa-download"></i>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Profile Image Container -->
+                <div class="order-1 md:order-2 relative group">
+                    <div
+                        class="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 transition-all duration-500 transform group-hover:rotate-3 group-hover:scale-105">
+                        <!-- Main Image -->
+                        <div
+                            class="absolute inset-0 rounded-xl overflow-hidden shadow-lg border-4 border-white dark:border-slate-700 transition-all duration-500">
+                            <img src="1.jpeg" alt="Profile Photo"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        </div>
+                        <!-- Decorative Elements -->
+                        <div
+                            class="absolute -top-3 -right-3 w-10 h-10 bg-white dark:bg-slate-800 rounded-full shadow-md flex items-center justify-center border-2 border-blue-400 animate-float-slow">
+                            <i class="fab fa-python text-yellow-400 text-lg"></i>
+                        </div>
+                        <div
+                            class="absolute -bottom-3 -left-3 w-10 h-10 bg-white dark:bg-slate-800 rounded-full shadow-md flex items-center justify-center border-2 border-green-400 animate-float-slower">
+                            <i class="fab fa-golang text-blue-500 text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Main Content -->
+        <main
+            class="content-container flex flex-col shadow-lg md:mx-4 lg:mx-16 md:px-8 lg:px-12 pt-4 pb-8 lg:pt-0 lg:pb-12 transition-colors duration-300 dark:bg-slate-900 dark:text-white border-x border-x-slate-200 dark:border-x-slate-700">
+            <!-- Tab Navigation -->
+            <section id="tabs-section" class="w-full shadow rounded-lg border border-slate-900 overflow-x-auto">
+                <div class="flex flex-row w-full min-w-max">
+                    <button onclick="window.openTab(event, 'About','About-Tab')" id="About-Tab"
+                        class="tab md:px-2 py-3 text-xs sm:text-sm md:text-base text-center font-medium">
+                        About
+                    </button>
+                    <button onclick="window.openTab(event, 'Projects','Projects-Tab')" id="Projects-Tab"
+                        class="tab md:px-2 py-3 text-xs sm:text-sm md:text-base text-center font-medium">
+                        Projects
+                    </button>
+                    <button onclick="window.openTab(event, 'Publications','Publications-Tab')" id="Publications-Tab"
+                        class="tab px-1 md:px-2 py-3 text-xs sm:text-sm md:text-base text-center font-medium">
+                        Publications
+                    </button>
+                    <!-- <button onclick="window.openTab(event, 'References','References-Tab')" id='References-Tab'
+                        class="tab px-1 md:px-2 py-3 text-xs sm:text-sm md:text-base text-center font-medium">
+                        References
+                    </button> -->
+                    <button onclick="window.openTab(event, 'Contact','Contact-Tab')" id="Contact-Tab"
+                        class="tab md:px-2 py-3 text-xs sm:text-sm md:text-base text-center font-medium">
+                        Contact
+                    </button>
+                </div>
+            </section>
+
+            <!-- Tab Content -->
+            <section class="mt-2">
+                <!-- About Tab -->
+                <div id="About" class="tab-content hidden p-4">
+                </div>
+
+                <!-- Projects Tab -->
+                <div id="Projects" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold mb-2 p-4">My Projects</h2>
+                    <div id="projects-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 mb-2">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 p-4">Personal Projects</h2>
+                    <div id="personal-projects-container" class="grid grid-cols-1 p-4 mb-2">
+                    </div>
+                </div>
+
+                <!-- Publications Tab -->
+                <div id="Publications" class="tab-content hidden p-4">
+                    <h2 class="text-2xl font-bold mb-6">Publications</h2>
+                    <div class="space-y-4">
+                    </div>
+                </div>
+
+                <!-- References Tab -->
+                <div id="References" class="tab-content hidden p-4">
+                    <h2 class="text-2xl font-bold mb-6">References</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Reference 1 -->
+                        <div class="dark:bg-slate-700 p-4 rounded-lg shadow border dark:border-slate-600">
+                            <h3 class="font-bold text-lg mb-2">Dr. John Smith</h3>
+                            <p class="dark:text-gray-400 mb-2">Professor of Computer Science</p>
+                            <p class="mb-2">University Name</p>
+                            <p class="mb-2"><strong>Email:</strong> john.smith@university.edu</p>
+                            <p class="mb-2"><strong>Phone:</strong> +1 (123) 456-7890</p>
+                        </div>
+
+                        <!-- Reference 2 -->
+                        <div class="dark:bg-slate-700 p-4 rounded-lg shadow border dark:border-slate-600">
+                            <h3 class="font-bold text-lg mb-2">Jane Doe</h3>
+                            <p class="dark:text-gray-400 mb-2">Senior Software Engineer</p>
+                            <p class="mb-2">Tech Company Inc.</p>
+                            <p class="mb-2"><strong>Email:</strong> jane.doe@company.com</p>
+                            <p class="mb-2"><strong>Phone:</strong> +1 (234) 567-8901</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Tab -->
+                <div id="Contact" class="tab-content hidden p-4">
+                    
+                </div>
+            </section>
+        </main>
+
+    </section>
+
+    <!--PDF Modal-->
+    <section id="pdf-modal" class="fixed inset-0 z-50 hidden">
+        <!-- Backdrop with separate click handler -->
+        <div class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm" onclick="togglePdfModal(event)"></div>
+
+        <div class="fixed inset-0 flex items-center justify-center p-4 pointer-events-none">
+            <div
+                class="bg-slate-800 rounded-lg px-4 max-w-4xl w-full h-full flex flex-col border border-slate-700 shadow-xl pointer-events-auto">
+                <!-- Header (10%) -->
+                <div class="flex justify-between items-center h-[10%]">
+                    <h3 class="text-xl font-bold">My CV Preview</h3>
+                    <button onclick="togglePdfModal(event)"
+                        class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+
+                <!-- PDF Viewer (80%) -->
+                <div
+                    class="bg-slate-700 flex-grow flex items-center justify-center rounded-lg my-2 border border-slate-600 relative">
+                    <!-- Loading State -->
+                    <div id="pdf-loading"
+                        class="absolute inset-0 flex items-center justify-center bg-slate-700/90 z-10">
+                        <div class="flex flex-col items-center">
+                            <i class="fas fa-spinner fa-spin text-3xl text-white mb-2"></i>
+                            <p class="text-white">Loading resume...</p>
+                        </div>
+                    </div>
+                    <iframe id="resume-iframe" class="w-full h-full" frameborder="0"></iframe>
+                </div>
+
+                <!-- Footer (10%) -->
+                <div class="flex justify-end items-center h-[10%]">
+                    <button id="download-cv-btn"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                        <i class="fas fa-download mr-2"></i> Download CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <section id="project-modal" class="fixed inset-0 z-50 hidden">
+        <!-- Backdrop with blur effect -->
+        <div class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm modal-backdrop"></div>
+
+        <div class="fixed inset-0 flex items-center justify-center p-4">
+            <div
+                class="bg-white dark:bg-slate-800 rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] flex flex-col border border-slate-300 dark:border-slate-700">
+                <!-- Header with close button -->
+                <div class="flex justify-between items-center p-4 border-b border-slate-300 dark:border-slate-700">
+                    <h2 id="project-title" class="text-xl font-bold dark:text-white">Project Details</h2>
+                    <button onclick="window.hideProjectModal()"
+                        class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+
+                <!-- Main content area -->
+                <div class="flex-1 overflow-hidden flex flex-col md:flex-row">
+                    <!-- Image Gallery (Left Side) - Scrollable on desktop -->
+                    <div class="md:w-1/2 p-4 overflow-y-auto mx-auto">
+                        <div id="project-images" class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
+                            <!-- Images will be dynamically inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Project Details (Right Side) -->
+                    <div
+                        class="md:w-1/2 p-6 overflow-y-auto border-t md:border-t-0 md:border-l border-slate-300 dark:border-slate-700">
+                        <p id="project-description" class="text-gray-700 dark:text-gray-300 mb-6"></p>
+
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-lg mb-2 dark:text-white">Technologies</h3>
+                            <div id="project-technologies" class="flex flex-wrap gap-2">
+                                <!-- Technologies will be inserted here -->
+                            </div>
+                        </div>
+
+                        <!-- Features Section -->
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-lg mb-2 dark:text-white">Key Features</h3>
+                            <ul id="project-features" class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+                                <!-- Features will be inserted here -->
+                            </ul>
+                        </div>
+
+                        <!-- Contributions Section -->
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-lg mb-2 dark:text-white">My Contributions</h3>
+                            <ul id="project-contributions"
+                                class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+                                <!-- Contributions will be inserted here -->
+                            </ul>
+                        </div>
+
+                        <!-- Challenges & Solutions Section -->
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-lg mb-2 dark:text-white">Challenges & Solutions</h3>
+                            <ul id="project-challenges"
+                                class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+                                <!-- Challenges will be inserted here -->
+                            </ul>
+                        </div>
+
+                        <!-- Impact Section -->
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-lg mb-2 dark:text-white">Impact</h3>
+                            <ul id="project-impact" class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+                                <!-- Impact will be inserted here -->
+                            </ul>
+                        </div>
+
+                        <div id="project-links" class="mb-6">
+                            <h3 class="font-semibold text-lg mb-2 dark:text-white">Project Links</h3>
+                            <div class="flex flex-wrap gap-4">
+                                <a id="project-live-link" href="#" target="_blank"
+                                    class="flex items-center text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Live Demo
+                                </a>
+                                <a id="project-code-link" href="#" target="_blank"
+                                    class="flex items-center text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                                    <i class="fab fa-github mr-2"></i>
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer with close button -->
+                <div class="p-4 border-t border-slate-300 dark:border-slate-700 flex justify-end">
+                    <button onclick="hideProjectModal()"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl">
+            <div class="flex items-center space-x-3">
+                <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+                <span class="text-lg font-medium dark:text-white">Loading data...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message modal -->
+    <div id="message-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <div
+            class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl max-w-md w-full mx-4 transform transition-all duration-300 scale-95">
+            <div class="flex items-start gap-3 mb-4">
+                <i id="message-icon" class="fas fa-info-circle text-xl mt-1"></i>
+                <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                        <h3 id="message-title" class="text-xl font-bold text-gray-800 dark:text-gray-200"></h3>
+                        <button onclick="hideMessageModal()"
+                            class="text-gray-500 hover:text-gray-700 dark:text-gray-400 ml-4">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <p id="message-content" class="text-gray-700 dark:text-gray-300 mt-2"></p>
+                </div>
+            </div>
+            <div class="flex justify-end">
+                <button onclick="hideMessageModal()"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error modal -->
+    <div id="error-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl max-w-md w-full">
+            <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-red-600 dark:text-red-400">Error</h3>
+                <button onclick="hideErrorModal()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <p id="error-message" class="text-gray-700 dark:text-gray-300 mb-4"></p>
+            <div class="flex justify-end">
+                <button onclick="hideErrorModal()"
+                    class="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</body>
+
+</html>
